@@ -1,0 +1,11 @@
+<?php
+$student = array(
+    "name" => "Maria",
+    "age" => 21,
+    "course" => "IT"
+);
+
+$json_output = json_encode($student);
+
+echo $json_output;
+?>
