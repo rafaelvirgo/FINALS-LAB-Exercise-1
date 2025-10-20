@@ -1,0 +1,17 @@
+<?php
+header('Content-Type: application/json');
+
+$json_input = file_get_contents('php://input');
+$data = json_decode($json_input, true);
+
+$name = $data["name"];
+$email = $data["email"];
+
+$response = array(
+    "message" => "Data received successfully!",
+    "name" => $name,
+    "email" => $email
+);
+
+echo json_encode($response);
+?>
